@@ -225,7 +225,7 @@ class YoukuScraper(BaseScraper):
 
             for component in data.page_component_list:
                 common_data = component.common_data
-                if not common_data or not common_data.title_dto or (common_data.is_youku != 1 and common_data.has_youku != 1):
+                if not common_data or not common_data.title_dto or (common_data.is_youku != 0 and common_data.has_youku != 0):
                     continue
                 
                 title = common_data.title_dto.display_name
